@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DeltaOS installer</title>
+    <style>
+        body {
+            font-family: serif;
+            background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+        .liquid-glass {
+            background-color: #60606040;                    
+            box-shadow: inset 5px 5px 5px #ffffffb0,
+                        inset -5px -5px 5px #00000080;
+            corner-shape: squircle;
+            border-radius: 20px;
+            padding: 7px;
+            gap: 10px;
+            backdrop-filter: blur(10px);
+            box-sizing: border-box;
+            transition: all 1s ease-in-out;
+            width: 500px;
+        }
+        h1 {
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 2.2em;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            margin-bottom: 25px;
+            font-weight: 400;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        button {
+            background: #60606040;                    
+            box-shadow: inset 5px 5px 5px #ffffffb0,
+                        inset -5px -5px 5px #00000080;
+            corner-shape: squircle;
+            border-radius: 20px;
+            padding: 7px;
+            gap: 10px;
+            backdrop-filter: blur(10px);
+            box-sizing: border-box;
+            transition: all 0.5s ease-in-out;
+            border: none;
+            color: white;
+        }
+        button:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="liquid-glass">
+        <h1>Welcome to DeltaOS</h1>
+        <p>Do a click on the button to install DeltaOS.</p>
+        <button onclick="instalar('delta-os.zip')">Install DeltaOS</button>
+        <details>
+            <summary>
+                More details
+            </summary>
+            <iframe src="./README.html" style="border:none;width:100%;height:400px" frameborder="0"></iframe>
+        </details>
+    </div>
+
+    <script>
+        function instalar(lnk) {
+            link = document.createElement('a');
+            [link.href, link.download] = [lnk, lnk.split('/').pop()];
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            link = undefined;
+        }
+    </script>
+</body>
+</html>
