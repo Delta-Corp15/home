@@ -36,14 +36,15 @@ function renderProjects(items) {
 }
 
 function filterProjects(query) {
-    const normalized = query.trim().toLowerCase();
-    if (!normalized) return projects;
-    return projects.filter(project => {
-        const description = project.description || '';
-        return project.title.toLowerCase().includes(normalized)
-            || description.toLowerCase().includes(normalized)
-            || project.tags.some(tag => tag.toLowerCase().includes(normalized));
-    });
+    const norm = query.trim().toLowerCase();
+    const input = norm.replace(/^(title:|description:|tags:)\s+/, '');
+    const req = norm.startsWith('title:') ? 'title' : norm.startsWith('description:') ? 'description' : norm.startsWith('tags:') ? 'tags' : '';
+    const ret = 
+        req === 'title' ? projects.filter(p => p.title.toLowerCase().includes(input)) :
+        req === 'description' ? projects.filter(p => (p.description || '').toLowerCase().includes(input)) :
+        req === 'tags' ? projects.filter(p => p.tags.join(' ').toLowerCase().includes(input)) :
+        projects.filter(p => p.title.toLowerCase().includes(input) || (p.description || '').toLowerCase().includes(input) || p.tags.join(' ').toLowerCase().includes(input));
+    return ret;
 }
 
 function updateSelectedFolder(card) {
