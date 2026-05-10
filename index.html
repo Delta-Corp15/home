@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta Corp Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Debuging help</p>
+                <h1>Delta Corp Homepage</h1>
+                <p class="hero-copy">Encuentra proyectos y carpetas en el mismo sitio. Accede directamente a <strong>connect.deltacorp.com</strong> y añade la carpeta del proyecto con un clic.</p>
+                <div class="hero-actions">
+                    <a class="button-link" href="https://connect.deltacorp.com" target="_blank" rel="noreferrer noopener">Ir a connect.deltacorp.com</a>
+                </div>
+            </div>
+            <div class="search-panel">
+                <label for="searchInput">Buscar proyectos</label>
+                <div class="search-box">
+                    <input id="searchInput" type="text" placeholder="Busca por nombre, descripción o etiqueta..." autocomplete="off">
+                    <button id="clearBtn" type="button">Limpiar</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="stats">
+                <article>
+                    <h2 id="resultCount">1</h2>
+                    <p>Proyecto(s) encontrados</p>
+                </article>
+                <article>
+                    <h2>Varios proyectos</h2>
+                    <p>Busca y agrega carpetas desde aquí</p>
+                </article>
+            </section>
+
+            <section class="selection-panel">
+                <p class="selected-label">Carpeta agregada al sitio</p>
+                <div class="selected-folder" id="selectedFolder">Haz clic en un proyecto para mostrar su carpeta aquí.</div>
+            </section>
+
+            <section class="project-grid" id="projectsList">
+                <!-- Los proyectos se cargan con JavaScript -->
+            </section>
+        </main>
+
+        <footer>
+            <p>Debuging help para encontrar proyectos y carpetas sin enfocarse demasiado en un solo tema.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+ 
