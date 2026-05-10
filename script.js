@@ -1,9 +1,9 @@
 const projects = [
     {
         title: 'Delta Connect',
-        description: 'Acceso al portal de colaboración y soporte interno de Delta Corp.',
+        description: 'Debug system made by Delta Corp (R) / TM',
         tags: ['connect', 'portal', 'Delta'],
-        folder: 'https://connect.deltacorp.com',
+        folder: 'http://connect.deltacorp.com/',
     },
     {
         title: 'OS',
@@ -27,7 +27,7 @@ const selectedFolderElement = document.getElementById('selectedFolder');
 
 function renderProjects(items) {
     projectsList.innerHTML = items.map(project => {
-        const description = project.description || 'Descripción pendiente';
+        const description = project.description || 'No description';
         const tags = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
         return `
             <article class="project-card" data-folder="${project.folder || ''}">
@@ -59,8 +59,8 @@ function updateSelectedFolder(card) {
     const href = folder && folder.startsWith('http') ? folder : folder;
 
     selectedFolderElement.innerHTML = hasFolder
-        ? `Proyecto <strong>${title}</strong> agregado: <a href="${href}" target="_blank" rel="noreferrer noopener">${folder}</a>`
-        : `Proyecto <strong>${title}</strong> agregado: no hay carpeta disponible para este proyecto.`;
+        ? `Proyect <strong>${title}</strong> added: <a href="${href}" target="_blank" rel="noreferrer noopener">${folder}</a>`
+        : `Proyect <strong>${title}</strong> added: no folder.`;
 
     document.querySelectorAll('.project-card.active').forEach(item => item.classList.remove('active'));
     card.classList.add('active');

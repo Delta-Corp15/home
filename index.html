@@ -10,18 +10,21 @@
     <div class="page-shell">
         <header class="hero">
             <div class="hero-content">
-                <p class="eyebrow">Debuging help</p>
+                <p class="eyebrow">Delta Corp's</p>
                 <h1>Delta Corp Homepage</h1>
-                <p class="hero-copy">Encuentra proyectos y carpetas en el mismo sitio. Accede directamente a <strong>connect.deltacorp.com</strong> y añade la carpeta del proyecto con un clic.</p>
+                <p class="hero-copy">
+                    This is a simple homepage for Delta Corp, where you can search and add folders to your site. 
+                    It is designed to be a quick and easy way to find and add folders to your site, without having to navigate through the entire site.
+                </p>
                 <div class="hero-actions">
-                    <a class="button-link" href="https://connect.deltacorp.com" target="_blank" rel="noreferrer noopener">Ir a connect.deltacorp.com</a>
+                    <a class="button-link" href="https://delta-corp15.github.io/connect/" target="_blank" rel="noreferrer noopener">Go to debugging help</a>
                 </div>
             </div>
             <div class="search-panel">
-                <label for="searchInput">Buscar proyectos</label>
+                <label for="searchInput">Search proyects</label>
                 <div class="search-box">
-                    <input id="searchInput" type="text" placeholder="Busca por nombre, descripción o etiqueta..." autocomplete="off">
-                    <button id="clearBtn" type="button">Limpiar</button>
+                    <input id="searchInput" type="text" placeholder="Search by name, description or tag..." autocomplete="off">
+                    <button id="clearBtn" type="button">Clear</button>
                 </div>
             </div>
         </header>
@@ -30,27 +33,23 @@
             <section class="stats">
                 <article>
                     <h2 id="resultCount">1</h2>
-                    <p>Proyecto(s) encontrados</p>
+                    <p>Proyects found</p>
                 </article>
                 <article>
-                    <h2>Varios proyectos</h2>
-                    <p>Busca y agrega carpetas desde aquí</p>
+                    <h2>Various proyects</h2>
+                    <p>Search and add folders from here</p>
                 </article>
             </section>
 
             <section class="selection-panel">
-                <p class="selected-label">Carpeta agregada al sitio</p>
-                <div class="selected-folder" id="selectedFolder">Haz clic en un proyecto para mostrar su carpeta aquí.</div>
+                <p class="selected-label">Folder added to site</p>
+                <div class="selected-folder" id="selectedFolder">Do a click to show link here</div>
             </section>
 
             <section class="project-grid" id="projectsList">
                 <!-- Los proyectos se cargan con JavaScript -->
             </section>
         </main>
-
-        <footer>
-            <p>Debuging help para encontrar proyectos y carpetas sin enfocarse demasiado en un solo tema.</p>
-        </footer>
     </div>
 
     <script src="script.js"></script>
