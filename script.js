@@ -1,11 +1,5 @@
 const projects = [
     {
-        title: 'Delta Connect',
-        description: 'Debug system made by Delta Corp (R) / TM',
-        tags: ['connect', 'portal', 'Delta'],
-        folder: 'http://connect.deltacorp.com/',
-    },
-    {
         title: 'OS',
         description: 'Complex and secure operating system designed in pure HTML + Node.js.',
         tags: ['OS', 'system', 'base'],
