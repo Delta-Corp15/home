@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "Roboto Min";
+    src: url("assets/ttf/Roboto-Regular.ttf") format("truetype");
+    font-weight: 100;
+    font-stretch: ultra-condensed;
+}
+
+@font-face {
+    font-family: "JetBrains Min";
+    src: url("assets/ttf/JetBrainsMono-Regular.ttf") format("truetype");
+    font-weight: 100;
+    font-stretch: ultra-condensed;
+}
+
+body {
+    padding: 16px;
+    font-family: "Roboto Min";
+}
+
+* {
+    box-sizing: border-box;
+    margin: 6px;
+    font-family: "Roboto Min";
+    font-size: 16px;
+}
+
+textarea {
+    background: linear-gradient(135deg, #666, #333);
+    font-family: 'JetBrains Min';
+    transition: all 0.2s ease;
+    border-radius: 12px;
+    box-shadow: inset 12px 12px 12px #fff2,
+                inset -12px -12px 12px #0004,
+                24px 24px 22px #0006;
+    padding: 24px;
+    color: #fff;
+    width: 100%;
+    height: 200px  ;
+}
+
+textarea.collapsed {
+    height: 12px;
+    padding: 0px;
+    color: #0000;
+}
+
+div#out {
+    border: 1px solid #000;
+    box-shadow: 24px 24px 22px #0002;
+    background-image: none;
+    background: #0002;
+    color: #000;
+}
+
+div {
+    transition: all 0.2s ease;
+    box-shadow: inset 12px 12px 12px #fff2,
+                inset -12px -12px 12px #0004,
+                24px 24px 22px #0006;
+    background-image: linear-gradient(135deg, #fff4, #0004),
+                      url("assets/png/tp-wood.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    padding: 24px;
+    color: #fff;
+}
+
+button {
+    transition: all 0.2s ease;
+    background-image: linear-gradient(135deg, #fff4, #0004),
+                      url("assets/png/tp-leather.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    box-shadow: inset 12px 12px 12px #fff2,
+                inset -12px -12px 12px #0004,
+                24px 24px 22px #0006;
+    border: none;
+    padding: 12px 24px;
+    color: #fff;
+}
+
+button:hover {
+    transform: scale(1.2);
+}

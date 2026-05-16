@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Delta WS</title>
+</head>
+<body>
+    <div>
+        <span>Delta Workspace</span>
+        <button id="upltd">
+            <img src="assets/svg/ip-upl.svg" width="24" height="24" alt="Upload">
+            <br><span>Text document</span>
+        </button>
+        <button id="addtd">
+            <img src="assets/svg/ip-add.svg" width="24" height="24" alt="New">
+            <br><span>Text document</span>
+        </button>
+        <button id="uplfd">
+            <img src="assets/svg/ip-upl.svg" width="24" height="24" alt="Upload">
+            <br><span>Form</span>
+        </button>
+        <button id="addfd">
+            <img src="assets/svg/ip-add.svg" width="24" height="24" alt="New">
+            <br><span>Form</span>
+        </button>
+    </div>
+    <textarea class="collapsed" id="ind" ondblclick="this.classList.toggle('collapsed')" onchange="change();"></textarea>
+    <div id="out"></div>
+    <button id="down">
+        <img src="assets/svg/ip-downl.svg" width="24" height="24" alt="Upload">
+        <br><span>Download</span>
+    </button>
+    <script src="script.js"></script>
+</body>
+</html>
