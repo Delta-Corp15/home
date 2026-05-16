@@ -1,9 +1,15 @@
 const projects = [
     {
-        title: 'OS',
+        title: 'Delta OS',
         description: 'Complex and secure operating system designed in pure HTML + Node.js.',
         tags: ['OS', 'system', 'base'],
         folder: 'OS/',
+    },
+    {
+        title: 'Delta WorkSpace',
+        description: 'A minimal workspace for forms an documents (better if you are a dev).',
+        tags: ['WS', 'minimal'],
+        folder: 'DeltaWS/',
     },
     {
         title: 'Coming Soon',
