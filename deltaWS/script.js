@@ -88,7 +88,7 @@ function DWSFDtoHTML(file) {
 function getDWSFDAnswers() {
     const questions = Array.from(out.querySelectorAll('.q')).map(e => e.textContent);
     const answers = Array.from(out.querySelectorAll('.r')).map(e => {
-        switch (e.tagName) {
+        switch (e.tagName.toLowerCase()) {
             case 'select':
                 return e.value;
             case 'input':
@@ -96,7 +96,7 @@ function getDWSFDAnswers() {
                     case 'checkbox':
                         return e.checked;
                     case 'number':
-                        return e.valueAsNumber;
+                        return Number(e.value);
                     case 'text':
                         return e.value;
                     default:
