@@ -109,7 +109,9 @@ function getDWSFDAnswers() {
         }
     });
 
-    const blob = new Blob([JSON.stringify({questions, answers})], { type: 'text/json' });
+    const org = {};
+    questions.forEach((elem, idx) => org[elem] = answers[idx]);
+    const blob = new Blob([JSON.stringify(org)], { type: 'text/json' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
     a.download = `responses.json`;
