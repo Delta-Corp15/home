@@ -70,7 +70,7 @@ function DWSFDtoHTML(file) {
             }
             case 'SHORT_ANSWER': {
                 const [question, nick] = variables;
-                html += `<input type="text" class="r" id="${nick}" /><label for="${nick}" class="q">${question.replace(/\\s/g, '&nbsp;').replace(/\\t/g, '&nbsp;'.repeat(8)).replace(/\\n/g, '<br>')}</label>`;
+                html += `<label for="${nick}" class="q">${question.replace(/\\s/g, '&nbsp;').replace(/\\t/g, '&nbsp;'.repeat(8)).replace(/\\n/g, '<br>')}</label><br><input type="text" class="r" id="${nick}" />`;
                 break;
             }
             case "": {
